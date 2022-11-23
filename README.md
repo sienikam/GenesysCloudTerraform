@@ -1,4 +1,4 @@
-# GenesysCloudTerraform
+# Genesys Cloud Terraform
 Jenkins job for migrating Genesys Cloud data between org unit using Terraform (Genesys Cloud Provider)
 
 # Requirements
