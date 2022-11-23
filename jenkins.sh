@@ -20,3 +20,4 @@ export GENESYSCLOUD_OAUTHCLIENT_SECRET=$import_oauthclient_secret
 # DESTROY (for testing)
 #sleep 120
 #"$WORKSPACE"/terraform -chdir=genesyscloud_tf_export destroy -auto-approve -no-color
+
