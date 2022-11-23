@@ -1,146 +1,145 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="viewport" content="width=device-width" /><title>https://jenkins-win.int.infinit.cx/job/GenesysCloudTerraform/config.xml</title><link rel="stylesheet" type="text/css" href="resource://content-accessible/viewsource.css" /></head><body id="viewsource" class="wrap highlight" style="tab-size: 4"><pre id="line1"><span></span><span class="pi">&lt;?xml version='1.1' encoding='UTF-8'?&gt;</span><span>
-<span id="line2"></span></span><span>&lt;<span class="start-tag">project</span>&gt;</span><span>
-<span id="line3"></span>  </span><span>&lt;<span class="start-tag">actions</span><span>/</span>&gt;</span><span>
-<span id="line4"></span>  </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line5"></span>  </span><span>&lt;<span class="start-tag">keepDependencies</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">keepDependencies</span>&gt;</span><span>
-<span id="line6"></span>  </span><span>&lt;<span class="start-tag">properties</span>&gt;</span><span>
-<span id="line7"></span>    </span><span>&lt;<span class="start-tag">com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</span> <span class="attribute-name">plugin</span>="<a class="attribute-value">gitlab-plugin@1.5.35</a>"&gt;</span><span>
-<span id="line8"></span>      </span><span>&lt;<span class="start-tag">gitLabConnection</span>&gt;</span><span>https://gitlab.int.infinit.cx/</span><span>&lt;/<span class="end-tag">gitLabConnection</span>&gt;</span><span>
-<span id="line9"></span>      </span><span>&lt;<span class="start-tag">jobCredentialId</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">jobCredentialId</span>&gt;</span><span>
-<span id="line10"></span>      </span><span>&lt;<span class="start-tag">useAlternativeCredential</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">useAlternativeCredential</span>&gt;</span><span>
-<span id="line11"></span>    </span><span>&lt;/<span class="end-tag">com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty</span>&gt;</span><span>
-<span id="line12"></span>    </span><span>&lt;<span class="start-tag">com.sonyericsson.rebuild.RebuildSettings</span> <span class="attribute-name">plugin</span>="<a class="attribute-value">rebuild@1.34</a>"&gt;</span><span>
-<span id="line13"></span>      </span><span>&lt;<span class="start-tag">autoRebuild</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">autoRebuild</span>&gt;</span><span>
-<span id="line14"></span>      </span><span>&lt;<span class="start-tag">rebuildDisabled</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">rebuildDisabled</span>&gt;</span><span>
-<span id="line15"></span>    </span><span>&lt;/<span class="end-tag">com.sonyericsson.rebuild.RebuildSettings</span>&gt;</span><span>
-<span id="line16"></span>    </span><span>&lt;<span class="start-tag">hudson.model.ParametersDefinitionProperty</span>&gt;</span><span>
-<span id="line17"></span>      </span><span>&lt;<span class="start-tag">parameterDefinitions</span>&gt;</span><span>
-<span id="line18"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line19"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>export_oauthclient_id</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line20"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>EXPORT - OAuthClient ID found on the OAuth page of Admin UI</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line21"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line22"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line23"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line24"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>export_oauthclient_secret</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line25"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>EXPORT - OAuthClient secret found on the OAuth page of Admin UI.</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line26"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line27"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line28"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line29"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>import_oauthclient_id</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line30"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>IMPORT - OAuthClient ID found on the OAuth page of Admin UI</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line31"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line32"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line33"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line34"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>import_oauthclient_secret</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line35"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>IMPORT - OAuthClient secret found on the OAuth page of Admin UI.</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line36"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line37"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line38"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line39"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>resource_types</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line40"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>Resource types to export - https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs
-<span id="line41"></span>
-<span id="line42"></span>Examples:
-<span id="line43"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_datatable<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line44"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_datatable_row<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line45"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_user_prompt<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line46"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_schedules<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line47"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_routing_queue<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line48"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_ivr<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line49"></span><span class="entity"><span>&amp;</span>quot;</span>genesyscloud_user<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line50"></span>
-<span id="line51"></span>DataTables Export - <span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_datatable<span class="entity"><span>&amp;</span>quot;</span>, <span class="entity"><span>&amp;</span>quot;</span>genesyscloud_architect_datatable_row<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line52"></span>Queues <span class="entity"><span>&amp;</span>amp;</span> Members of queue - <span class="entity"><span>&amp;</span>quot;</span>genesyscloud_user<span class="entity"><span>&amp;</span>quot;</span>, <span class="entity"><span>&amp;</span>quot;</span>genesyscloud_routing_queue<span class="entity"><span>&amp;</span>quot;</span></span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line53"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line54"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line55"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line56"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>aws_region_export</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line57"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>EXPORT AWS region where org exists. e.g. us-east-1
-<span id="line58"></span>https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line59"></span>          </span><span>&lt;<span class="start-tag">defaultValue</span>&gt;</span><span>eu-central-1</span><span>&lt;/<span class="end-tag">defaultValue</span>&gt;</span><span>
-<span id="line60"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line61"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line62"></span>        </span><span>&lt;<span class="start-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line63"></span>          </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>aws_region_import</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line64"></span>          </span><span>&lt;<span class="start-tag">description</span>&gt;</span><span>IMPORT AWS region where org exists. e.g. us-east-1
-<span id="line65"></span>https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/</span><span>&lt;/<span class="end-tag">description</span>&gt;</span><span>
-<span id="line66"></span>          </span><span>&lt;<span class="start-tag">defaultValue</span>&gt;</span><span>eu-central-1</span><span>&lt;/<span class="end-tag">defaultValue</span>&gt;</span><span>
-<span id="line67"></span>          </span><span>&lt;<span class="start-tag">trim</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">trim</span>&gt;</span><span>
-<span id="line68"></span>        </span><span>&lt;/<span class="end-tag">hudson.model.StringParameterDefinition</span>&gt;</span><span>
-<span id="line69"></span>      </span><span>&lt;/<span class="end-tag">parameterDefinitions</span>&gt;</span><span>
-<span id="line70"></span>    </span><span>&lt;/<span class="end-tag">hudson.model.ParametersDefinitionProperty</span>&gt;</span><span>
-<span id="line71"></span>  </span><span>&lt;/<span class="end-tag">properties</span>&gt;</span><span>
-<span id="line72"></span>  </span><span>&lt;<span class="start-tag">scm</span> <span class="attribute-name">class</span>="<a class="attribute-value">hudson.plugins.git.GitSCM</a>" <span class="attribute-name">plugin</span>="<a class="attribute-value">git@4.11.3</a>"&gt;</span><span>
-<span id="line73"></span>    </span><span>&lt;<span class="start-tag">configVersion</span>&gt;</span><span>2</span><span>&lt;/<span class="end-tag">configVersion</span>&gt;</span><span>
-<span id="line74"></span>    </span><span>&lt;<span class="start-tag">userRemoteConfigs</span>&gt;</span><span>
-<span id="line75"></span>      </span><span>&lt;<span class="start-tag">hudson.plugins.git.UserRemoteConfig</span>&gt;</span><span>
-<span id="line76"></span>        </span><span>&lt;<span class="start-tag">url</span>&gt;</span><span>https://gitlab.int.infinit.cx/ext.kamil.sienicki/genesyscloudterraform/</span><span>&lt;/<span class="end-tag">url</span>&gt;</span><span>
-<span id="line77"></span>      </span><span>&lt;/<span class="end-tag">hudson.plugins.git.UserRemoteConfig</span>&gt;</span><span>
-<span id="line78"></span>    </span><span>&lt;/<span class="end-tag">userRemoteConfigs</span>&gt;</span><span>
-<span id="line79"></span>    </span><span>&lt;<span class="start-tag">branches</span>&gt;</span><span>
-<span id="line80"></span>      </span><span>&lt;<span class="start-tag">hudson.plugins.git.BranchSpec</span>&gt;</span><span>
-<span id="line81"></span>        </span><span>&lt;<span class="start-tag">name</span>&gt;</span><span>*/main</span><span>&lt;/<span class="end-tag">name</span>&gt;</span><span>
-<span id="line82"></span>      </span><span>&lt;/<span class="end-tag">hudson.plugins.git.BranchSpec</span>&gt;</span><span>
-<span id="line83"></span>    </span><span>&lt;/<span class="end-tag">branches</span>&gt;</span><span>
-<span id="line84"></span>    </span><span>&lt;<span class="start-tag">doGenerateSubmoduleConfigurations</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">doGenerateSubmoduleConfigurations</span>&gt;</span><span>
-<span id="line85"></span>    </span><span>&lt;<span class="start-tag">submoduleCfg</span> <span class="attribute-name">class</span>="<a class="attribute-value">empty-list</a>"<span>/</span>&gt;</span><span>
-<span id="line86"></span>    </span><span>&lt;<span class="start-tag">extensions</span><span>/</span>&gt;</span><span>
-<span id="line87"></span>  </span><span>&lt;/<span class="end-tag">scm</span>&gt;</span><span>
-<span id="line88"></span>  </span><span>&lt;<span class="start-tag">canRoam</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">canRoam</span>&gt;</span><span>
-<span id="line89"></span>  </span><span>&lt;<span class="start-tag">disabled</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">disabled</span>&gt;</span><span>
-<span id="line90"></span>  </span><span>&lt;<span class="start-tag">blockBuildWhenDownstreamBuilding</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">blockBuildWhenDownstreamBuilding</span>&gt;</span><span>
-<span id="line91"></span>  </span><span>&lt;<span class="start-tag">blockBuildWhenUpstreamBuilding</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">blockBuildWhenUpstreamBuilding</span>&gt;</span><span>
-<span id="line92"></span>  </span><span>&lt;<span class="start-tag">triggers</span><span>/</span>&gt;</span><span>
-<span id="line93"></span>  </span><span>&lt;<span class="start-tag">concurrentBuild</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">concurrentBuild</span>&gt;</span><span>
-<span id="line94"></span>  </span><span>&lt;<span class="start-tag">builders</span>&gt;</span><span>
-<span id="line95"></span>    </span><span>&lt;<span class="start-tag">hudson.tasks.Shell</span>&gt;</span><span>
-<span id="line96"></span>      </span><span>&lt;<span class="start-tag">command</span>&gt;</span><span>export PATH=<span class="entity"><span>&amp;</span>quot;</span>/cygdrive/c/Tools/cygwin64/bin/:$PATH<span class="entity"><span>&amp;</span>quot;</span>
-<span id="line97"></span>
-<span id="line98"></span># Update resource_types variable in terraform file
-<span id="line99"></span>sed -i <span class="entity"><span>&amp;</span>quot;</span>s/RESOURCE_TYPES/${resource_types}/g<span class="entity"><span>&amp;</span>quot;</span> genesyscloud_tf_export.tf
-<span id="line100"></span>
-<span id="line101"></span># EXPORT
-<span id="line102"></span>export GENESYSCLOUD_REGION=$aws_region_export
-<span id="line103"></span>export GENESYSCLOUD_OAUTHCLIENT_ID=$export_oauthclient_id
-<span id="line104"></span>export GENESYSCLOUD_OAUTHCLIENT_SECRET=$export_oauthclient_secret
-<span id="line105"></span><span class="entity"><span>&amp;</span>quot;</span>$WORKSPACE<span class="entity"><span>&amp;</span>quot;</span>/terraform init -no-color
-<span id="line106"></span><span class="entity"><span>&amp;</span>quot;</span>$WORKSPACE<span class="entity"><span>&amp;</span>quot;</span>/terraform apply -no-color -auto-approve
-<span id="line107"></span>
-<span id="line108"></span># IMPORT
-<span id="line109"></span>export GENESYSCLOUD_REGION=$aws_region_import
-<span id="line110"></span>export GENESYSCLOUD_OAUTHCLIENT_ID=$import_oauthclient_id
-<span id="line111"></span>export GENESYSCLOUD_OAUTHCLIENT_SECRET=$import_oauthclient_secret
-<span id="line112"></span><span class="entity"><span>&amp;</span>quot;</span>$WORKSPACE<span class="entity"><span>&amp;</span>quot;</span>/terraform -chdir=genesyscloud_tf_export init -no-color
-<span id="line113"></span><span class="entity"><span>&amp;</span>quot;</span>$WORKSPACE<span class="entity"><span>&amp;</span>quot;</span>/terraform -chdir=genesyscloud_tf_export apply -no-color -auto-approve
-<span id="line114"></span>
-<span id="line115"></span># DESTROY (for testing)
-<span id="line116"></span>sleep 120
-<span id="line117"></span><span class="entity"><span>&amp;</span>quot;</span>$WORKSPACE<span class="entity"><span>&amp;</span>quot;</span>/terraform -chdir=genesyscloud_tf_export destroy -auto-approve -no-color</span><span>&lt;/<span class="end-tag">command</span>&gt;</span><span>
-<span id="line118"></span>      </span><span>&lt;<span class="start-tag">configuredLocalRules</span><span>/</span>&gt;</span><span>
-<span id="line119"></span>    </span><span>&lt;/<span class="end-tag">hudson.tasks.Shell</span>&gt;</span><span>
-<span id="line120"></span>  </span><span>&lt;/<span class="end-tag">builders</span>&gt;</span><span>
-<span id="line121"></span>  </span><span>&lt;<span class="start-tag">publishers</span>&gt;</span><span>
-<span id="line122"></span>    </span><span>&lt;<span class="start-tag">hudson.plugins.ws__cleanup.WsCleanup</span> <span class="attribute-name">plugin</span>="<a class="attribute-value">ws-cleanup@0.42</a>"&gt;</span><span>
-<span id="line123"></span>      </span><span>&lt;<span class="start-tag">patterns</span> <span class="attribute-name">class</span>="<a class="attribute-value">empty-list</a>"<span>/</span>&gt;</span><span>
-<span id="line124"></span>      </span><span>&lt;<span class="start-tag">deleteDirs</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">deleteDirs</span>&gt;</span><span>
-<span id="line125"></span>      </span><span>&lt;<span class="start-tag">skipWhenFailed</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">skipWhenFailed</span>&gt;</span><span>
-<span id="line126"></span>      </span><span>&lt;<span class="start-tag">cleanWhenSuccess</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">cleanWhenSuccess</span>&gt;</span><span>
-<span id="line127"></span>      </span><span>&lt;<span class="start-tag">cleanWhenUnstable</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">cleanWhenUnstable</span>&gt;</span><span>
-<span id="line128"></span>      </span><span>&lt;<span class="start-tag">cleanWhenFailure</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">cleanWhenFailure</span>&gt;</span><span>
-<span id="line129"></span>      </span><span>&lt;<span class="start-tag">cleanWhenNotBuilt</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">cleanWhenNotBuilt</span>&gt;</span><span>
-<span id="line130"></span>      </span><span>&lt;<span class="start-tag">cleanWhenAborted</span>&gt;</span><span>true</span><span>&lt;/<span class="end-tag">cleanWhenAborted</span>&gt;</span><span>
-<span id="line131"></span>      </span><span>&lt;<span class="start-tag">notFailBuild</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">notFailBuild</span>&gt;</span><span>
-<span id="line132"></span>      </span><span>&lt;<span class="start-tag">cleanupMatrixParent</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">cleanupMatrixParent</span>&gt;</span><span>
-<span id="line133"></span>      </span><span>&lt;<span class="start-tag">externalDelete</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">externalDelete</span>&gt;</span><span>
-<span id="line134"></span>      </span><span>&lt;<span class="start-tag">disableDeferredWipeout</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">disableDeferredWipeout</span>&gt;</span><span>
-<span id="line135"></span>    </span><span>&lt;/<span class="end-tag">hudson.plugins.ws__cleanup.WsCleanup</span>&gt;</span><span>
-<span id="line136"></span>  </span><span>&lt;/<span class="end-tag">publishers</span>&gt;</span><span>
-<span id="line137"></span>  </span><span>&lt;<span class="start-tag">buildWrappers</span>&gt;</span><span>
-<span id="line138"></span>    </span><span>&lt;<span class="start-tag">hudson.plugins.ws__cleanup.PreBuildCleanup</span> <span class="attribute-name">plugin</span>="<a class="attribute-value">ws-cleanup@0.42</a>"&gt;</span><span>
-<span id="line139"></span>      </span><span>&lt;<span class="start-tag">deleteDirs</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">deleteDirs</span>&gt;</span><span>
-<span id="line140"></span>      </span><span>&lt;<span class="start-tag">cleanupParameter</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">cleanupParameter</span>&gt;</span><span>
-<span id="line141"></span>      </span><span>&lt;<span class="start-tag">externalDelete</span>&gt;</span><span></span><span>&lt;/<span class="end-tag">externalDelete</span>&gt;</span><span>
-<span id="line142"></span>      </span><span>&lt;<span class="start-tag">disableDeferredWipeout</span>&gt;</span><span>false</span><span>&lt;/<span class="end-tag">disableDeferredWipeout</span>&gt;</span><span>
-<span id="line143"></span>    </span><span>&lt;/<span class="end-tag">hudson.plugins.ws__cleanup.PreBuildCleanup</span>&gt;</span><span>
-<span id="line144"></span>  </span><span>&lt;/<span class="end-tag">buildWrappers</span>&gt;</span><span>
-<span id="line145"></span></span><span>&lt;/<span class="end-tag">project</span>&gt;</span><span></span></pre></body></html>
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty plugin="gitlab-plugin@1.5.35">
+      <gitLabConnection>https://gitlab.int.infinit.cx/</gitLabConnection>
+      <jobCredentialId></jobCredentialId>
+      <useAlternativeCredential>false</useAlternativeCredential>
+    </com.dabsquared.gitlabjenkins.connection.GitLabConnectionProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.34">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>export_oauthclient_id</name>
+          <description>EXPORT - OAuthClient ID found on the OAuth page of Admin UI</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>export_oauthclient_secret</name>
+          <description>EXPORT - OAuthClient secret found on the OAuth page of Admin UI.</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>import_oauthclient_id</name>
+          <description>IMPORT - OAuthClient ID found on the OAuth page of Admin UI</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>import_oauthclient_secret</name>
+          <description>IMPORT - OAuthClient secret found on the OAuth page of Admin UI.</description>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>resource_types</name>
+          <description>Resource types to export - https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs
+
+Examples:
+&quot;genesyscloud_architect_datatable&quot;
+&quot;genesyscloud_architect_datatable_row&quot;
+&quot;genesyscloud_architect_user_prompt&quot;
+&quot;genesyscloud_architect_schedules&quot;
+&quot;genesyscloud_routing_queue&quot;
+&quot;genesyscloud_architect_ivr&quot;
+&quot;genesyscloud_user&quot;
+
+DataTables Export - &quot;genesyscloud_architect_datatable&quot;, &quot;genesyscloud_architect_datatable_row&quot;
+Queues &amp; Members of queue - &quot;genesyscloud_user&quot;, &quot;genesyscloud_routing_queue&quot;</description>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>aws_region_export</name>
+          <description>EXPORT AWS region where org exists. e.g. us-east-1
+https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/</description>
+          <defaultValue>eu-central-1</defaultValue>
+          <trim>true</trim>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>aws_region_import</name>
+          <description>IMPORT AWS region where org exists. e.g. us-east-1
+https://help.mypurecloud.com/articles/aws-regions-for-genesys-cloud-deployment/</description>
+          <defaultValue>eu-central-1</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@4.11.3">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://gitlab.int.infinit.cx/ext.kamil.sienicki/genesyscloudterraform/</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/main</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="empty-list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>export PATH=&quot;/cygdrive/c/Tools/cygwin64/bin/:$PATH&quot;
+
+# Update resource_types variable in terraform file
+sed -i &quot;s/RESOURCE_TYPES/${resource_types}/g&quot; genesyscloud_tf_export.tf
+
+# EXPORT
+export GENESYSCLOUD_REGION=$aws_region_export
+export GENESYSCLOUD_OAUTHCLIENT_ID=$export_oauthclient_id
+export GENESYSCLOUD_OAUTHCLIENT_SECRET=$export_oauthclient_secret
+&quot;$WORKSPACE&quot;/terraform init -no-color
+&quot;$WORKSPACE&quot;/terraform apply -no-color -auto-approve
+
+# IMPORT
+export GENESYSCLOUD_REGION=$aws_region_import
+export GENESYSCLOUD_OAUTHCLIENT_ID=$import_oauthclient_id
+export GENESYSCLOUD_OAUTHCLIENT_SECRET=$import_oauthclient_secret
+&quot;$WORKSPACE&quot;/terraform -chdir=genesyscloud_tf_export init -no-color
+&quot;$WORKSPACE&quot;/terraform -chdir=genesyscloud_tf_export apply -no-color -auto-approve
+
+# DESTROY (for testing)
+sleep 120
+&quot;$WORKSPACE&quot;/terraform -chdir=genesyscloud_tf_export destroy -auto-approve -no-color</command>
+      <configuredLocalRules/>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.plugins.ws__cleanup.WsCleanup plugin="ws-cleanup@0.42">
+      <patterns class="empty-list"/>
+      <deleteDirs>false</deleteDirs>
+      <skipWhenFailed>false</skipWhenFailed>
+      <cleanWhenSuccess>true</cleanWhenSuccess>
+      <cleanWhenUnstable>true</cleanWhenUnstable>
+      <cleanWhenFailure>true</cleanWhenFailure>
+      <cleanWhenNotBuilt>true</cleanWhenNotBuilt>
+      <cleanWhenAborted>true</cleanWhenAborted>
+      <notFailBuild>false</notFailBuild>
+      <cleanupMatrixParent>false</cleanupMatrixParent>
+      <externalDelete></externalDelete>
+      <disableDeferredWipeout>false</disableDeferredWipeout>
+    </hudson.plugins.ws__cleanup.WsCleanup>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ws__cleanup.PreBuildCleanup plugin="ws-cleanup@0.42">
+      <deleteDirs>false</deleteDirs>
+      <cleanupParameter></cleanupParameter>
+      <externalDelete></externalDelete>
+      <disableDeferredWipeout>false</disableDeferredWipeout>
+    </hudson.plugins.ws__cleanup.PreBuildCleanup>
+  </buildWrappers>
+</project>
